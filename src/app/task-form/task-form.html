@@ -1,0 +1,9 @@
+<div class="form">
+  <input
+    #titleInput
+    type="text"
+    placeholder="Nova tarefa..."
+    (keyup.enter)="add(titleInput)"
+  />
+  <button type="button" (click)="add(titleInput)">Adicionar</button>
+</div>

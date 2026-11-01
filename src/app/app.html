@@ -2,6 +2,7 @@
   <header>
     <h1 class="logo">{{ title() }}</h1>
   </header>
+  <app-task-form (taskAdded)="addTask($event)" />
   <section>
     @for (task of tasks(); track task.id) {
       <app-task-item [task]="task" />
