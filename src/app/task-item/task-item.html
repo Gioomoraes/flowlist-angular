@@ -1,1 +1,6 @@
-<p>{{ task().title }}</p>
+<div class="task" [class.done]="task().completed">
+  <span class="title">{{ task().title }}</span>
+  @if (task().completed) {
+    <span class="status">feita</span>
+  }
+</div>

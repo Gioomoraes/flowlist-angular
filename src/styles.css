@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --cream: #FBF6EC;
+  --paper: #FFFDF8;
+  --ink: #2E2A3B;
+  --ink-soft: #6B6480;
+  --lilac: #B9A3F0;
+  --lavender: #E6DEFA;
+  --pink: #F6C5D6;
+  --mint: #BFE6CF;
+  --line: #DDD5EE;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+}
