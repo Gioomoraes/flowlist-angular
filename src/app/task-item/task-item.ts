@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './task-item.css',
   templateUrl: './task-item.html',
 })
-export class TaskItem {}
+export class TaskItem {
+  taskTitle = 'Estudando Angular';
+}
