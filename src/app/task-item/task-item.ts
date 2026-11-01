@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Task } from '../task';
 
 @Component({
@@ -9,10 +9,7 @@ import { Task } from '../task';
 })
 
 export class TaskItem {
-  task: Task = {
-    id: 1,
-    title: 'Estudar Angular',
-    completed: false,
-  };
+  task = input.required<Task>();
 }
+
 

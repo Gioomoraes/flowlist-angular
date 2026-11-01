@@ -1,3 +1,4 @@
+import { Task } from './task';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TaskItem } from './task-item/task-item';
@@ -10,4 +11,9 @@ import { TaskItem } from './task-item/task-item';
 })
 export class App {
   protected readonly title = signal('flowlist');
+    protected readonly firstTask: Task = {
+    id: 1,
+    title: 'Estudar Angular',
+    completed: false,
+  };
 }
