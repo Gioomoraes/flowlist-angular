@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from '../task';
 
 @Component({
   imports: [],
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './task-item.css',
   templateUrl: './task-item.html',
 })
+
 export class TaskItem {
-  taskTitle = 'Estudando Angular';
+  task: Task = {
+    id: 1,
+    title: 'Estudar Angular',
+    completed: false,
+  };
 }
+
