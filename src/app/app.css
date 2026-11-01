@@ -1,0 +1,12 @@
+.page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+}

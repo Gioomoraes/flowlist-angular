@@ -1,5 +1,11 @@
-<h1>{{ title() }}</h1>
-@for (task of tasks(); track task.id) {
-  <app-task-item [task]="task" />
-}
+<main class="page">
+  <header>
+    <h1 class="logo">{{ title() }}</h1>
+  </header>
+  <section>
+    @for (task of tasks(); track task.id) {
+      <app-task-item [task]="task" />
+    }
+  </section>
+</main>
 <router-outlet />

@@ -8,10 +8,13 @@
   --pink: #F6C5D6;
   --mint: #BFE6CF;
   --line: #DDD5EE;
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
 }
 
 body {
   margin: 0;
   background: var(--cream);
   color: var(--ink);
+  font-family: var(--font-body);
 }
