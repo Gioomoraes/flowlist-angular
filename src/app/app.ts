@@ -11,9 +11,9 @@ import { TaskItem } from './task-item/task-item';
 })
 export class App {
   protected readonly title = signal('flowlist');
-    protected readonly firstTask: Task = {
-    id: 1,
-    title: 'Estudar Angular',
-    completed: false,
-  };
+      protected readonly tasks = signal<Task[]>([
+    { id: 1, title: 'Estudar Angular', completed: false },
+    { id: 2, title: 'Criar o formulário de tarefas', completed: false },
+    { id: 3, title: 'Escrever o README', completed: true },
+  ]);
 }
