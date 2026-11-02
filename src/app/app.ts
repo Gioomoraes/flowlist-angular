@@ -1,5 +1,5 @@
 import { Task } from './task';
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TaskItem } from './task-item/task-item';
 import { TaskForm } from './task-form/task-form';
@@ -38,4 +38,8 @@ export class App {
   protected deleteTask(id: number) {
     this.tasks.update((current) => current.filter((task) => task.id !== id));
   }
+
+    protected readonly doneCount = computed(
+    () => this.tasks().filter((task) => task.completed).length,
+  );
 }

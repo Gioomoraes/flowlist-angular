@@ -10,3 +10,29 @@
   font-size: 2rem;
   margin: 0 0 1.5rem;
 }
+
+.counter {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background: var(--pink);
+  border-radius: 999px;
+}
+
+.empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--ink-soft);
+}
+
+.empty svg {
+  color: var(--lilac);
+  margin-bottom: 0.75rem;
+}
+
+.empty p {
+  margin: 0;
+  font-size: 0.9375rem;
+}
