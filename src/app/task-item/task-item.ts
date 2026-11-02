@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Task } from '../task';
 
 @Component({
@@ -10,6 +10,8 @@ import { Task } from '../task';
 
 export class TaskItem {
   task = input.required<Task>();
+  toggled = output<number>();
+  deleted = output<number>();
 }
 
 

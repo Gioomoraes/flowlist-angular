@@ -1,6 +1,54 @@
 <div class="task" [class.done]="task().completed">
+  <button
+    type="button"
+    class="check"
+    aria-label="Concluir tarefa"
+    [attr.aria-pressed]="task().completed"
+    (click)="toggled.emit(task().id)"
+  >
+    @if (task().completed) {
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M20 6 9 17l-5-5" />
+      </svg>
+    }
+  </button>
+
   <span class="title">{{ task().title }}</span>
-  @if (task().completed) {
-    <span class="status">feita</span>
-  }
+
+  <button
+    type="button"
+    class="delete"
+    aria-label="Excluir tarefa"
+    (click)="deleted.emit(task().id)"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 6h18" />
+      <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+      <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+      <path d="M10 11v6" />
+      <path d="M14 11v6" />
+    </svg>
+  </button>
 </div>

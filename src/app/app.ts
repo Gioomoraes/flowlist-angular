@@ -26,4 +26,16 @@ export class App {
       { id: this.nextId++, title, completed: false },
     ]);
   }
+
+    protected toggleTask(id: number) {
+    this.tasks.update((current) =>
+      current.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task,
+      ),
+    );
+  }
+
+  protected deleteTask(id: number) {
+    this.tasks.update((current) => current.filter((task) => task.id !== id));
+  }
 }
